@@ -1,5 +1,5 @@
 # 💫 About Me:
-Founder and CEO at MecroTech.<br>https://mecrotech.in/<br>Full‑Stack Developer | React - Node.js - System Design | Building User‑Centric Web Apps.<br>Full-Stack Developer and Tech Lead with over 5 years of experience in Fintech, Retail E-commerce, and Service sectors.
+Founder & CEO at MecroTech | Full‑Stack Developer & Tech Lead (5+ years) <br>Building scalable web solutions in Fintech, E‑commerce & SaaS <br>React - Node.js - System Design | Democratizing enterprise‑grade technology for visionary businesses.
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/nitishgulia_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/nitishkumar-sde) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:genitish@gmail.com) 
