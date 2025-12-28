@@ -1,4 +1,4 @@
-# 💫 About Me:
+# 💫 Hi, I'm Nitish:
 Founder & CEO at MecroTech | Full‑Stack Developer & Tech Lead (5+ years) <br>Building scalable web solutions in Fintech, E‑commerce & SaaS <br>React - Node.js - System Design | Democratizing enterprise‑grade technology for visionary businesses.
 
 ## 🌐 Socials:
