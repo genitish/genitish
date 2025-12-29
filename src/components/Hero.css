@@ -232,3 +232,9 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: none;
+  }
+}

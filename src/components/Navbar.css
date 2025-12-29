@@ -76,6 +76,8 @@
   cursor: pointer;
   padding: 0.5rem;
   transition: all var(--transition-base);
+  position: relative;
+  z-index: 1001;
 }
 
 .navbar-toggle:hover {
@@ -86,6 +88,7 @@
 @media (max-width: 768px) {
   .navbar-toggle {
     display: block;
+    z-index: 1002; /* Higher than mobile menu */
   }
 
   .navbar-links {
@@ -95,13 +98,15 @@
     height: 100vh;
     width: 70%;
     max-width: 300px;
-    background: rgba(15, 15, 25, 0.98);
+    background: rgba(10, 10, 20, 0.98);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     gap: 2rem;
     transition: right var(--transition-slow);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1001;
   }
 
   .navbar-links.active {
