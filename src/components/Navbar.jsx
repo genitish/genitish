@@ -3,7 +3,7 @@ import { FiMenu, FiX } from 'react-icons/fi'
 import './Navbar.css'
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(() => typeof window !== 'undefined' && window.scrollY > 50)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const navRef = useRef(null)
 

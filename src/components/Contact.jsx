@@ -13,8 +13,8 @@ const Contact = () => {
     {
       icon: <FiLinkedin />,
       label: 'LinkedIn',
-      value: 'nitishkumar-sde',
-      link: 'https://www.linkedin.com/in/nitishkumar-sde/',
+      value: 'nitishgulia-',
+      link: 'https://www.linkedin.com/in/nitishgulia-/',
     },
     {
       icon: <FiGithub />,

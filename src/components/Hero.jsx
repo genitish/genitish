@@ -5,7 +5,7 @@ import './Hero.css'
 const Hero = () => {
   const socialLinks = [
     { icon: <FiGithub />, href: 'https://github.com/genitish', label: 'GitHub' },
-    { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/nitishkumar-sde/', label: 'LinkedIn' },
+    { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/nitishgulia-/', label: 'LinkedIn' },
     { icon: <FiInstagram />, href: 'https://instagram.com/nitishgulia_', label: 'Instagram' },
     { icon: <SiLeetcode />, href: 'https://leetcode.com/u/genitish/', label: 'LeetCode' },
     { icon: <FiMail />, href: 'mailto:genitish@gmail.com', label: 'Email' },
