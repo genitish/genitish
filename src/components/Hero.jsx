@@ -25,7 +25,7 @@ const Hero = () => {
             </h2>
             <p className="hero-description">
               Specializing in high-impact <strong>Fintech, E-commerce, and AI solutions</strong>. 
-              Over <strong>5 years</strong> of excellence in building scalable web systems at <a href="https://mecrotech.in/" target="_blank" rel="noopener noreferrer" className="company-link">MecroTech</a>.
+              Over <strong>5 years</strong> of excellence in building scalable web systems.
             </p>
 
             <div className="hero-cta">

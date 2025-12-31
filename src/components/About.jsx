@@ -38,7 +38,7 @@ const About = () => {
               world-class team at MecroTech to build innovative products that shape the future of tech solutions.
             </p>
             <p>
-              I hold an <strong>MCA in Software Engineering</strong> and am always eager to collaborate on innovative products 
+              I hold an <strong>MCA in Software Engineering</strong> degree and am always eager to collaborate on innovative products 
               that combine cutting-edge technology with exceptional user experience.
             </p>
           </div>

@@ -32,37 +32,95 @@
 }
 
 .stat-card {
-  text-align: center;
-  padding: 2rem 1.5rem;
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  padding: 2rem;
+  background: var(--color-bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Subtle gradient overlay on background */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.3);
 }
 
 .stat-icon {
-  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.1);
   color: var(--color-primary);
-  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(124, 58, 237, 0.2);
 }
 
+.stat-card:hover .stat-icon {
+  background: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+}
+
+/* Adjust value size to accommodate text like "Modern" */
 .stat-value {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  background: var(--gradient-primary);
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Add a gradient effect only to the text if desired, or keep it solid for readability. 
+   Let's keep the gradient but make it subtle or ensure high contrast. */
+.stat-value {
+  background: linear-gradient(135deg, #fff 30%, var(--color-primary-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1;
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: var(--color-text-tertiary);
+  color: var(--color-text-secondary);
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Specific adjustments for grids */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
 }
 
 @media (max-width: 968px) {
@@ -73,7 +131,30 @@
 }
 
 @media (max-width: 640px) {
+  .about-stats {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns on mobile */
+  }
+
   .stat-card {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .stat-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    border-radius: 8px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
   }
 }
