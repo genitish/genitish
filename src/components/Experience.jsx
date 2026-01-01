@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import { FiBriefcase } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 import './Experience.css'
 
 const Experience = () => {
@@ -31,7 +33,7 @@ const Experience = () => {
       title: 'Application Developer 2 (Full Stack)',
       company: 'Udaan.com',
       period: 'September 2021 – September 2022',
-      location: 'New Delhi, India',
+      location: 'Bengaluru, India (Remote)',
       description: [
         'Increased inbound happy flow rate from 61% to 95% by implementing intelligent inventory filters and PO-based validation.',
         'Pioneered CatchWeight feature achieving 0.6% of GMV, a first for B2B platforms in India.',
@@ -43,7 +45,7 @@ const Experience = () => {
       title: 'Technical Mentor',
       company: 'Newton School',
       period: 'April 2022 – February 2023',
-      location: 'Remote',
+      location: 'Part Time (Remote)',
       description: [
         'Mentored 100+ students in Data Structures, Algorithms, and modern frontend technologies (React.js, JavaScript).',
         'Developed curriculum and conducted live sessions to improve student problem-solving and technical skills.',
@@ -62,23 +64,66 @@ const Experience = () => {
     },
   ]
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  }
+
   return (
     <section id="experience" className="experience">
       <div className="container">
-        <div className="section-title">
+        <motion.div 
+          className="section-title"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2>Work <span className="gradient-text">Experience</span></h2>
           <p>My professional journey</p>
-        </div>
+        </motion.div>
 
-        <div className="experience-timeline">
+        <motion.div 
+          className="experience-timeline"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {experiences.map((exp, index) => (
-            <div key={index} className="timeline-item">
+            <motion.div key={index} className="timeline-item" variants={itemVariants}>
               <div className="timeline-marker">
-                <div className="timeline-icon">
+                <motion.div 
+                  className="timeline-icon"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <FiBriefcase />
-                </div>
+                </motion.div>
               </div>
-              <div className="timeline-content glass-card">
+              <motion.div 
+                className="timeline-content glass-card"
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="timeline-header">
                   <div>
                     <h3 className="timeline-title">{exp.title}</h3>
@@ -102,10 +147,10 @@ const Experience = () => {
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

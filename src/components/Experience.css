@@ -14,6 +14,8 @@
   background: var(--gradient-primary);
 }
 
+/* Animations */
+/* Handled by Framer Motion */
 .timeline-item {
   position: relative;
   padding-left: 60px;
@@ -28,6 +30,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 2;
 }
 
 .timeline-icon {
